@@ -40,9 +40,6 @@ public class FolkClient {
 		return new PublicCommunityClient(heldinConfig, certificateConfig);
 	}
 	private static CertificateConfig securityConfig(HeldinConfig heldinConfig) {
-		System.out.println("!!!!!!!!!!!!!!");
-		System.out.println("SECURE: " + heldinConfig.secure);
-		System.out.println("!!!!!!!!!!!!!!");
 		return heldinConfig.secure ? CertificateConfig.trustAll() : null;
 	}
 
