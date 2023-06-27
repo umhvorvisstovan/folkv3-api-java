@@ -164,7 +164,7 @@ public class HeldinConfig {
 			var subSystemCode = parts[3];
 			var envSepIdx = xRoadInstance.indexOf('-');
 			var xRoadInstancePrefix = envSepIdx == -1 ? xRoadInstance : xRoadInstance.substring(0, envSepIdx);
-			var env = Env.of(envSepIdx == -1 ? "PROD" : xRoadInstance.substring(envSepIdx + 1));
+			var env = Env.of(envSepIdx == -1 ? "" : xRoadInstance.substring(envSepIdx + 1));
 			return new Identifier(xRoadInstancePrefix, env, memberClass, memberCode, subSystemCode);
 		}
 		public Identifier withEnv(Identifier identifier) {
