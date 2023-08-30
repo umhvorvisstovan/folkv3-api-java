@@ -10,6 +10,9 @@ group = 'fo.us.folkv3.api'
 version = '3.0.0'
 
 java {
+    toolchain {
+	    languageVersion = JavaLanguageVersion.of(17)
+    }
 	sourceCompatibility = JavaVersion.VERSION_17
 }
 
